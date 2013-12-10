@@ -39,6 +39,9 @@ keys "string", "hw", "name", "domain", "ip_low" and "ip_high". Here are few exam
 Complete regression test is provided in distributed package (see file test.java). Compile everything and run script 'test' in top level directory to see all possible inputs.
 
 Requirements
-Java 1.5 or higher.
-Jakarta ORO.
+============
+
+* Java 1.5 or higher.
+* Jakarta ORO.
+
 Note that once unpacked you will probably need to modify SETTINGS file, which describes location of JDK and other settings
