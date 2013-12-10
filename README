@@ -1,0 +1,31 @@
+$Id: README,v 1.2 2007/07/13 21:06:35 priimak Exp $
+
+	This package is a part of netdb/whois suite. It's primary usage is to 
+	be used as a library, providing parsing employed in Stanford's whois 
+	implementation. See more detailed info in docs/README
+	
+	Make Requirements:
+
+		j2sdk (java1.3 or higher)
+		Jakarta ORO (jakarta.apache.org/oro) regex package.
+
+	Make:
+
+		make	- to make parser.jar ( parser libary itself ), 
+			test.class and test ( shell script ) - these are 
+			used for testing parser. Run test shell script to 
+                        see what happens.
+		make docs	- to create javadoc style docs under docs/
+		make dist	- to create source distribution in a file
+			parser.src.`cat VERSION`.tar.gz where VERSION is
+			a file under top level direcrory.
+		make clean	- to clean results of 'make', but not docs/ !
+		make realclean	- will clean everything including docs 
+			generated with 'make docs'
+
+	Installation:
+
+		Place generated parser.jar in whatever place you want it,
+		note that default location of this file assumed for making
+		whois is /usr/local/netdb-parser netdb in a directory name 
+		becouse it is a part of netdb project.

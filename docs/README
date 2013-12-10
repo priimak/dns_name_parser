@@ -1,0 +1,17 @@
+$Id: README,v 1.3 2007/03/03 01:56:34 jlidtke Exp $
+
+	Class su.netdb.parser.Parser provides parsing used in whois, but can 
+be used anywere else.
+	File SETTINS under top level directory provides common settings 
+used during compilation. Like location of java, javac, javadoc etc. They all 
+can be overriden by shell variables, see file SETTINGS itself. In order to 
+compile and use this class you will need extra package which provides perl 
+like regular expressions, from http://jakarta.apache.org/oro , the package 
+used during develpment was jakarta-oro-2.0.1.tar.gz but you can try newer as 
+well. You can set shell variable NETDB_ORO, which is a full path to 
+jakarta-oro-x.0.x.jar. Result of compilation is file parser.jar under top level
+directory and a test.class which provides test of compiled parser. There is 
+also an executabe file 'test' which is used to run test. You may examine 
+test.java to see example of using Parser. 
+	You can generate javadoc documenation by runing 'make docs'. 
+'make realclean' will remove all compiled stuff including javadoc docs.

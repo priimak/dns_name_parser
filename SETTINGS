@@ -1,0 +1,65 @@
+# Generic settings applied to whole distribution
+
+# Here is a java stuff
+JAVA_HOME := ${NETDB_JAVA_HOME}
+ifndef JAVA_HOME
+JAVA_HOME := /opt/jdk1.6.0
+endif
+export JAVA_HOME
+
+JVM := ${NETDB_JVM}
+ifndef JVM
+JVM := $(JAVA_HOME)/bin/java
+endif
+export JVM
+
+JAVAC := ${NETDB_JAVAC}
+ifndef JAVAC
+JAVAC := $(JAVA_HOME)/bin/javac
+endif
+export JAVAC
+
+JAVADOC := ${NETDB_JAVADOC}
+ifndef JAVADOC
+JAVADOC := $(JAVA_HOME)/bin/javadoc
+endif
+export JAVADOC
+
+JAR := ${NETDB_JAR}
+ifndef JAR
+JAR := $(JAVA_HOME)/bin/jar
+endif
+export JAR
+
+ORO := ${NETDB_ORO}
+ifndef ORO
+ORO := ../../../lib/jakarta-oro-2.0.8
+endif
+export ORO
+
+OROJAR := ${NETDB_OROJAR}
+ifndef OROJAR
+OROJAR := $(ORO)/jakarta-oro-2.0.8.jar
+endif
+export OROJAR
+
+# It has to be a GNU tar
+GNUTAR := ${NETDB_GNUTAR}
+ifndef GNUTAR
+GNUTAR := tar
+endif
+export GNUTAR
+
+# Path to install
+INSTALL := ${NETDB_INSTALL}
+ifndef INSTALL
+INSTALL := install
+endif
+export INSTALL
+
+#Path to copy utility, if you want to see process of copying add -v switch
+CP := ${NETDB_CP}
+ifndef CP
+CP := cp
+endif
+export CP
