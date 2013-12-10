@@ -27,14 +27,14 @@ function is to differentiate between several types of possible input strings. Na
 (exact, ip range or ip with wildcards) or hardware address. The result of the parsing is a Hashtable with possible 
 keys "string", "hw", "name", "domain", "ip_low" and "ip_high". Here are few examples:
 
-input                string           name    doman     hw                ip_low               ip_high
-161.64.12-4          NULL             NULL    NULL      NULL              161.64.12.0          161.64.20.14
-171.64.20.1[01][1-9] NULL             NULL    NULL      NULL              171.64.20.1[01][1-9] NULL
-171.66.120.40/29     NULL             NULL    NULL      NULL              171.66.120.40        171.66.120.47
-171.64.20.19         NULL             NULL    NULL      NULL              171.64.20.19         171.64.20.19
-a.and.b.com          NULL             a       and.b.com NULL              NULL                 NULL
-asdj^da4.foo.com     asdj^da4.foo.com NULL    NULL      NULL              NULL                 NULL
-FF:0F:EE:0E:DD:0D    NULL             NULL    NULL      FF:0F:EE:0E:DD:0D NULL                 NULL
+ input                string           name    doman     hw                ip_low               ip_high
+ 161.64.12-4          NULL             NULL    NULL      NULL              161.64.12.0          161.64.20.14
+ 171.64.20.1[01][1-9] NULL             NULL    NULL      NULL              171.64.20.1[01][1-9] NULL
+ 171.66.120.40/29     NULL             NULL    NULL      NULL              171.66.120.40        171.66.120.47
+ 171.64.20.19         NULL             NULL    NULL      NULL              171.64.20.19         171.64.20.19
+ a.and.b.com          NULL             a       and.b.com NULL              NULL                 NULL
+ asdj^da4.foo.com     asdj^da4.foo.com NULL    NULL      NULL              NULL                 NULL
+ FF:0F:EE:0E:DD:0D    NULL             NULL    NULL      FF:0F:EE:0E:DD:0D NULL                 NULL
 
 Complete regression test is provided in distributed package (see file test.java). Compile everything and run script 'test' in top level directory to see all possible inputs.
 
